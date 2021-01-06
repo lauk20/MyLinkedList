@@ -21,7 +21,7 @@ public class MyLinkedList{
       current = current.getNext();
     }
 
-    return current;
+    return null;
   }
 
   public boolean add(String value){
@@ -40,6 +40,40 @@ public class MyLinkedList{
     size = size + 1;
 
     return true;
+  }
+
+  public void add(int index, String value){
+    if (index < 0 || index > size()){
+      throw new IndexOutOfBoundsException("Index not valid: " + index);
+    }
+
+    Node currentNodeAtIndex = getNodeAtIndex(index);
+    Node added = new Node(value);
+
+    if (currentNodeAtIndex == null){
+      added.setPrev(getNodeAtIndex(size() - 1));
+      getNodeAtIndex(size() - 1).setNext(added);
+    }
+    else{
+      added.setPrev(currentNodeAtIndex.getPrev());
+      added.setNext(currentNodeAtIndex);
+      currentNodeAtIndex.setPrev(added);
+    }
+
+    if (index == 0){
+      start = added;
+    }
+    else{
+      if (index != size()){
+        added.getPrev().setNext(added);
+      }
+    }
+
+    if (index == size() - 1){
+      end = added;
+    }
+
+    size = size + 1;
   }
 
   public String get(int index){

@@ -26,5 +26,12 @@ public class Tester{
     System.out.println(A1.get(2));
     System.out.println(A1.size());
     System.out.println(A1.get(4));
+    A1.add(0, "FirstYup");
+    System.out.println(A1.get(0));
+    System.out.println(A1.get(1));
+    A1.add(A1.size(), "LastYup");
+    System.out.println(A1.get(6));
+    A1.add(1, "SecondYup");
+    System.out.println(A1.get(1));
   }
 }
