@@ -6,5 +6,11 @@ public class Tester{
     System.out.println(A.getData());
     System.out.println(B.getData());
     System.out.println(C.getData());
+    System.out.println(A.getData());
+    A.setNext(B);
+    System.out.println(A.getNext().getData());
+    B.setPrev(A);
+    A.setData("Hello");
+    System.out.println(B.getPrev().getData());
   }
 }

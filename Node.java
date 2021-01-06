@@ -17,4 +17,16 @@ public class Node{
   public Node getPrev(){
     return prev;
   }
+
+  public void setData(String value){
+    data = value;
+  }
+
+  public void setNext(Node nextNode){
+    next = nextNode;
+  }
+
+  public void setPrev(Node prevNode){
+    prev = prevNode;
+  }
 }
