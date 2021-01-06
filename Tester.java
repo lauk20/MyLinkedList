@@ -49,5 +49,15 @@ public class Tester{
     System.out.println(A2.get(1));
     System.out.println(A2.get(0));
     System.out.println(A2.get(4));
+    System.out.println(A2.toString());
+
+    System.out.println();
+
+    MyLinkedList A3 = new MyLinkedList();
+    for (int i = 0; i < 100; i++){
+      A3.add(i + "");
+    }
+    System.out.println(A3);
+    System.out.println(A3.reversedToString());
   }
 }

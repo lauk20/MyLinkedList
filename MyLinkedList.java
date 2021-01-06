@@ -95,5 +95,39 @@ public class MyLinkedList{
     return old;
   }
 
+  public String toString(){
+    String result = "[";
+    Node current = start;
 
+    for (int i = 0; i < size(); i++){
+      result = result + current.getData();
+      current = current.getNext();
+
+      if (current != null){
+        result = result + ", ";
+      }
+    }
+
+    result = result + "]";
+
+    return result;
+  }
+
+  public String reversedToString(){
+    String result = "[";
+    Node current = end;
+
+    for (int i = 0; i < size(); i++){
+      result = result + current.getData();
+      current = current.getPrev();
+
+      if (current != null){
+        result = result + ", ";
+      }
+    }
+
+    result = result + "]";
+
+    return result;
+  }
 }
