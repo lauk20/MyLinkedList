@@ -10,14 +10,30 @@ public class MyLinkedList{
     return size;
   }
 
+  private Node getNodeAtIndex(int index){
+    Node current = start;
+
+    for (int i = 0; i < index + 1; i++){
+      if (i == index){
+        return current;
+      }
+
+      current = current.getNext();
+    }
+
+    return current;
+  }
+
   public boolean add(String value){
     Node newNode = new Node(value);
 
     if (size() == 0){
       start = newNode;
+      end = newNode;
     }
     else{
       newNode.setPrev(end);
+      end.setNext(newNode);
       end = newNode;
     }
 
@@ -25,5 +41,14 @@ public class MyLinkedList{
 
     return true;
   }
+
+  public String get(int index){
+    if (index < 0 || index >= size){
+      throw new IndexOutOfBoundsException("Index not valid: " + index);
+    }
+
+    return getNodeAtIndex(index).getData();
+  }
+
 
 }
