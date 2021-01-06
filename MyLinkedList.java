@@ -84,5 +84,16 @@ public class MyLinkedList{
     return getNodeAtIndex(index).getData();
   }
 
+  public String set(int index, String value){
+    if (index < 0 || index >= size()){
+      throw new IndexOutOfBoundsException("Index not valid: " + index);
+    }
+
+    String old = getNodeAtIndex(index).getData();
+    getNodeAtIndex(index).setData(value);
+
+    return old;
+  }
+
 
 }

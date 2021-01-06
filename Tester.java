@@ -12,6 +12,7 @@ public class Tester{
     B.setPrev(A);
     A.setData("Hello");
     System.out.println(B.getPrev().getData());
+
     System.out.println();
 
     MyLinkedList A1 = new MyLinkedList();
@@ -33,5 +34,20 @@ public class Tester{
     System.out.println(A1.get(6));
     A1.add(1, "SecondYup");
     System.out.println(A1.get(1));
+
+    System.out.println();
+
+    MyLinkedList A2 = new MyLinkedList();
+    A2.add("1");
+    A2.add("3");
+    A2.add("3");
+    A2.add("4");
+    A2.add("5");
+    System.out.println(A2.set(1, "2"));
+    System.out.println(A2.set(0, "5"));
+    System.out.println(A2.set(4, "1"));
+    System.out.println(A2.get(1));
+    System.out.println(A2.get(0));
+    System.out.println(A2.get(4));
   }
 }
