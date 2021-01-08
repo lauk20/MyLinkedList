@@ -58,7 +58,7 @@ public class Tester{
       A3.add(i + "");
     }
     System.out.println(A3);
-    System.out.println(A3.reversedToString());
+    System.out.println(A3.toStringReversed());
 
     System.out.println();
 
@@ -81,5 +81,31 @@ public class Tester{
     System.out.println(A12);
     System.out.println(A12.remove(0));
     System.out.println(A12);
+
+    System.out.println();
+
+    MyLinkedList A13 = new MyLinkedList();
+    MyLinkedList A14 = new MyLinkedList();
+    A13.extend(A14);
+    System.out.println(A13);
+
+    MyLinkedList a = new MyLinkedList();
+    MyLinkedList b = new MyLinkedList();
+    for(int i = 0; i < 10; i++){
+      if(i < 5){
+        a.add(i+"");
+      }else{
+        b.add(i+"");
+      }
+    }
+    System.out.println();
+    System.out.println("A:"+a+a.size());
+    System.out.println("B:"+b+b.size());
+
+    a.extend(b);
+    System.out.println("A:"+a+a.size());
+    System.out.println("B:"+b+b.size());
+    System.out.println("A reversed:"+a.toStringReversed()+a.size());
+    System.out.println("B reversed:"+b.toStringReversed()+b.size());
   }
 }

@@ -113,7 +113,7 @@ public class MyLinkedList{
     return result;
   }
 
-  public String reversedToString(){
+  public String toStringReversed(){
     String result = "[";
     Node current = end;
 
@@ -157,5 +157,23 @@ public class MyLinkedList{
     size = size - 1;
 
     return destroy.getData();
+  }
+
+  public void extend(MyLinkedList other){
+    Node last = getNodeAtIndex(size() - 1);
+
+    if (last != null){
+      if (other.size() > 0){
+        Node otherFirst = other.getNodeAtIndex(0);
+
+        last.setNext(otherFirst);
+        otherFirst.setPrev(last);
+
+        end = other.getNodeAtIndex(size() - 1);
+      }
+    }
+
+    size = size + other.size();
+    other.size = 0;
   }
 }
