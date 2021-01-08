@@ -130,4 +130,32 @@ public class MyLinkedList{
 
     return result;
   }
+
+  public String remove(int index){
+    if (index < 0 || index >= size()){
+      throw new IndexOutOfBoundsException("Invalid index: " + index);
+    }
+
+    Node destroy = getNodeAtIndex(index);
+    Node dPrev = destroy.getPrev();
+    Node dNext = destroy.getNext();
+
+    if (dPrev != null){
+      dPrev.setNext(dNext);
+    }
+    else{
+      start = dNext;
+    }
+
+    if (dNext != null){
+      dNext.setPrev(dPrev);
+    }
+    else{
+      end = dPrev;
+    }
+
+    size = size - 1;
+
+    return destroy.getData();
+  }
 }

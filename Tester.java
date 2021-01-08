@@ -59,5 +59,27 @@ public class Tester{
     }
     System.out.println(A3);
     System.out.println(A3.reversedToString());
+
+    System.out.println();
+
+    MyLinkedList A11 = new MyLinkedList();
+    //System.out.println(A11.get(0));
+
+    MyLinkedList A12 = new MyLinkedList();
+    A12.add("1");
+    A12.add("2");
+    System.out.println(A12);
+    System.out.println(A12.remove(1));
+    System.out.println(A12);
+    A12.add("2");
+    System.out.println(A12);
+    A12.add("3");
+    System.out.println(A12);
+    System.out.println(A12.remove(1));
+    System.out.println(A12);
+    System.out.println(A12.remove(0));
+    System.out.println(A12);
+    System.out.println(A12.remove(0));
+    System.out.println(A12);
   }
 }
