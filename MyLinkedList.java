@@ -52,7 +52,9 @@ public class MyLinkedList{
 
     if (currentNodeAtIndex == null){
       added.setPrev(getNodeAtIndex(size() - 1));
-      getNodeAtIndex(size() - 1).setNext(added);
+      if (size() != 0){
+        getNodeAtIndex(size() - 1).setNext(added);
+      }
     }
     else{
       added.setPrev(currentNodeAtIndex.getPrev());

@@ -107,5 +107,10 @@ public class Tester{
     System.out.println("B:"+b+b.size());
     System.out.println("A reversed:"+a.toStringReversed()+a.size());
     System.out.println("B reversed:"+b.toStringReversed()+b.size());
+
+    System.out.println();
+
+    MyLinkedList m = new MyLinkedList();
+    m.add(0, "hello");
   }
 }
