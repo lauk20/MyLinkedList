@@ -34,6 +34,7 @@ public class Tester{
     System.out.println(A1.get(6));
     A1.add(1, "SecondYup");
     System.out.println(A1.get(1));
+    System.out.println(A1);
 
     System.out.println();
 
@@ -112,5 +113,101 @@ public class Tester{
 
     MyLinkedList m = new MyLinkedList();
     m.add(0, "hello");
+    m.add(1, "hello2");
+    System.out.println(m);
+    System.out.println(m.toStringReversed());
+
+    System.out.println();
+
+    MyLinkedList n = new MyLinkedList();
+    n.add(0, "hello");
+    n.add("hello2");
+    n.add(2, "hello3");
+    System.out.println(n);
+    System.out.println(n.toStringReversed());
+
+    System.out.println();
+
+    MyLinkedList o = new MyLinkedList();
+    o.add("hello");
+    System.out.println(o);
+    o.add(1, "hello2");
+    System.out.println(o);
+    o.add("hello3");
+    System.out.println(o);
+    System.out.println(o.toStringReversed());
+
+    System.out.println();
+
+    MyLinkedList p = new MyLinkedList();
+    p.add("hello");
+    p.add("hello3");
+    p.add(1, "hello2");
+    System.out.println(p);
+    p.remove(0);
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+    p.remove(1);
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+    p.add(1, "hello3");
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+    p.remove(1);
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+    p.add("hello3");
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+
+    System.out.println();
+
+    p = new MyLinkedList();
+    p.add("hello");
+    p.add("hello3");
+    p.add(1, "hello2");
+    System.out.println(p);
+    p.remove(2);
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+    p.add(2, "hello3");
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+    p.remove(1);
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+    p.add(1, "hello2");
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+
+    System.out.println();
+
+    MyLinkedList q = new MyLinkedList();
+    q.add("hello4");
+    q.add("hello5");
+    System.out.println(q.get(q.size() - 1));
+    p.extend(q);
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+    System.out.println(q);
+    p.remove(0);
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+    p.remove(3);
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+    p.remove(1);
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+    p.add(2, "hello5");
+    p.add(0, "hello");
+    System.out.println(p);
+    System.out.println(p.toStringReversed());
+
+    MyLinkedList r = new MyLinkedList();
+    r.extend(p);
+    System.out.println(r);
+    System.out.println(r.toStringReversed());
+
   }
 }

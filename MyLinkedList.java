@@ -71,7 +71,7 @@ public class MyLinkedList{
       }
     }
 
-    if (index == size() - 1){
+    if (index == size()){// || (index == 0 && size() == 0)){
       end = added;
     }
 
@@ -162,7 +162,7 @@ public class MyLinkedList{
   }
 
   public void extend(MyLinkedList other){
-    Node last = getNodeAtIndex(size() - 1);
+    Node last = end;
 
     if (last != null){
       if (other.size() > 0){
@@ -171,11 +171,19 @@ public class MyLinkedList{
         last.setNext(otherFirst);
         otherFirst.setPrev(last);
 
-        end = other.getNodeAtIndex(size() - 1);
+        end = other.getNodeAtIndex(other.size() - 1);
       }
+    }
+    else{
+      start = other.getNodeAtIndex(0);
+      end = other.getNodeAtIndex(other.size() - 1);
+
+      System.out.println(end);
     }
 
     size = size + other.size();
     other.size = 0;
+    other.start = null;
+    other.end = null;
   }
 }
