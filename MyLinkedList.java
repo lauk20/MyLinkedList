@@ -177,8 +177,6 @@ public class MyLinkedList{
     else{
       start = other.getNodeAtIndex(0);
       end = other.getNodeAtIndex(other.size() - 1);
-
-      System.out.println(end);
     }
 
     size = size + other.size();
